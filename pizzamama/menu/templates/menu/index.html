@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'menu/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Les Pizza de Tsilavina:</h1>
+    <ul>
+    {% for pizza in pizzas %}
+        <li>{{ pizza.nom  }} : {{ pizza.prix }}</li>
+
+    {% endfor %}
+    </ul>
+    <a href="{% url 'a_propos:index'%}">Contacter </a>
+</body>
+</html>
